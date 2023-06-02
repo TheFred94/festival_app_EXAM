@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #f9f9f9;
+  --black: #1d1c29;
+  --yellow: #f9f01f;
+  --font-playfair: "Playfair Display", serif;
+  --font-gillSans: "Gill Sans", "Tahoma", sans-serif;
+}
+h1 {
+  font-family: var(--font-playfair);
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 3rem;
+  color: var(--white);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px white;
+  color: var(--white);
+  font-family: "Gill Sans", sans-serif;
+  transform-origin: left;
+}
+
+h3 {
+  font-family: "Gill Sans", sans-serif;
+  color: var(--white);
+}
+
+p {
+  font-family: "Gill Sans", sans-serif;
+  color: var(--white);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: "Gill Sans", sans-serif;
+}
+p {
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+p:hover {
+  cursor: default;
+}
+
+a > *:hover {
+  cursor: pointer;
+}
+
+/* span.timeslot {
+  transition: visibility 250ms ease-in-out;
+} */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: #f9f01f;
+}
+
+.MuiTabs-indicator {
+  background-color: #f9f01f;
+}
+
+.css-2ptc2y.Mui-selected,
+.css-17liyhh.Mui-selected {
+  color: #f9f01f;
+}
+
+.MuiInputLabel-root {
+  font-family: var(--font-gillSans);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: white;
+  top: -3px;
+}
+
+.css1jy569b.Mui-focused {
+  font-family: var(--font-gillSans);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+  background-color: #1d1c29;
+  padding-right: 5px;
+}
+
+.MuiOutlinedInput-input {
+  padding: 0.5rem 1rem;
+  color: #f9f9f9;
+  border: solid #f9f9f9 2px;
+  border-radius: 5px;
+}
+.MuiOutlinedInput-input:hover {
+  border: solid #f9f9f9 2px;
+}
+
+.Mui-focused.MuiOutlinedInput-input {
+  border: solid var(--yellow) 2px;
+}
+
+.css-1v4ccyo.Mui-focused.MuiOutlinedInput-notchedOutline {
+  border-color: var(--yellow);
+}
+.css-o4j2nk-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: var(--yellow);
+}
+
+/* burgermenu */
+.MuiDrawer-paper,
+.MuiDrawer-root {
+  display: flex;
+  justify-content: center;
+  z-index: 40;
+}
+
+.MuiDrawer-paper {
+  background: linear-gradient(90deg, rgba(168, 54, 218, 0.38), rgba(169, 54, 218, 0));
+  backdrop-filter: blur(15px);
+}
+
+#alert-dialog-title {
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-gillSans);
+  text-transform: uppercase;
+}
+
+#alert-dialog-description,
+.css-sxix9q-MuiButtonBase-root-MuiButton-root,
+.css-180lf2n-MuiButtonBase-root-MuiButton-root {
+  font-family: var(--font-gillSans);
+}
+
+/* ----------- */
+@media screen and (min-width: 1024px) {
+  .bandcontainer > Image {
+    background-size: 166%;
+    transition: all 250ms ease-in-out;
+    background-position: center;
+  }
+  .bandcontainer:hover {
+    background-size: 178%;
+  }
+
+  .bandcontainer:hover span.timeslot {
+    opacity: 1;
+  }
+
+  .bandHover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--white), var(--white) 50%, transparent 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px white;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 200ms ease;
+  }
+
+  .bandHover2 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, transparent, transparent 50%, var(--white) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 200ms ease;
+  }
+
+  .bandHover:hover,
+  .bandHover2:hover {
+    background-position: 0 100%;
+  }
+
+  .navHover,
+  .awesomeEffect {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .navHover::after,
+  .awesomeEffect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    transform-origin: bottom right;
+    transition: transform 150ms ease-in;
+    transform: scaleX(0);
+  }
+
+  .awesomeEffect::after {
+    height: 2px;
+    bottom: -3px;
+  }
+
+  .navHover:hover::after,
+  .awesomeEffect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+@media screen and (width < 473px) {
+  .css-hlj6pa-MuiDialogActions-root {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .css-sxix9q-MuiButtonBase-root-MuiButton-root,
+  .css-180lf2n-MuiButtonBase-root-MuiButton-root {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}
+
+.MuiSvgIcon-root {
+  fill: var(--black);
+}
+.MuiSnackbarContent-message {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
